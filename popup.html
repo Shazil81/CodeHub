@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        min-width: 340px;
+        background: #08111f;
+      }
+    </style>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <img
+          src="icon.png"
+          alt="CodeHub Logo"
+          width="35"
+          height="35"
+          style="border-radius: 10px"
+        />
+        <div>
+          <h1>CodeHub</h1>
+        </div>
+      </header>
+
+      <section class="card" id="auth-section">
+        <!-- Auth content injected by popup.js -->
+      </section>
+
+      <section class="card">
+        <label>
+          Repository
+          <input
+            type="text"
+            id="repo-input"
+            placeholder="your-name/coding-solutions"
+          />
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="autosync-checkbox" />
+          <span>Auto-push accepted submissions</span>
+        </label>
+        <button class="secondary" id="save-btn">Save settings</button>
+      </section>
+
+      <div class="notice" id="notice-box" style="display: none"></div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

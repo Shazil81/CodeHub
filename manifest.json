@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "CodeHub",
+  "version": "2.0.0",
+  "description": "Securely save accepted LeetCode and GeeksforGeeks submissions to GitHub.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "host_permissions": [
+    "https://leetcode.com/*",
+    "https://www.geeksforgeeks.org/*",
+    "https://practice.geeksforgeeks.org/*",
+    "https://github.com/login/*",
+    "https://api.github.com/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html" },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://leetcode.com/problems/*",
+        "https://www.geeksforgeeks.org/problems/*",
+        "https://practice.geeksforgeeks.org/problems/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; base-uri 'self'"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["injected.js"],
+      "matches": [
+        "https://leetcode.com/*",
+        "https://www.geeksforgeeks.org/*",
+        "https://practice.geeksforgeeks.org/*"
+      ]
+    }
+  ]
+}

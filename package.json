@@ -1,0 +1,11 @@
+{
+  "name": "codehub",
+  "private": true,
+  "version": "2.0.0",
+  "scripts": {
+    "format": "prettier --write background.js content.js github-oauth-config.js manifest.json package.json popup.html README.md popup.js"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
+}
