@@ -72,6 +72,14 @@ Feel free to dive into the codebase and open a Pull Request.
 
 ---
 
+## 👤 Author
+
+**Mohammad Shazil Moin**
+- Email: ahmadshahab890@gmail.com
+- GitHub: [Shazil81](https://github.com/Shazil81)
+
+---
+
 ## 📝 License
 
 This project is open-source and available under the MIT License.
